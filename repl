@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# lfe_shell:server().
+
+rebar3 as dev shell

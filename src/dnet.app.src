@@ -1,0 +1,18 @@
+{application, 'dnet',
+ [{description, "REST client-server."},
+  {vsn, "0.0.1"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib,
+    cowboy,
+    gun
+   ]},
+  {mod, {'dnet-app', []}},
+  {env, []},
+  {modules, []},
+
+  {contributors, []},
+  {licenses, []},
+  {links, []}
+ ]}.
