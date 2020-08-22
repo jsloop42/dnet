@@ -57,7 +57,7 @@
    (io:format "dnet:handle_call 'get-page~n")
    `#(reply ,(tuple 'ok #"success") state-data))
   (('stop _caller state-data)
-   `#(stop shutdown ok state-data))
+   `#(stop normal shutdown_ok state-data))
   ((message _caller state-data)
    (io:format "dnet:handle_call unknown message ~p~n" `(,message))
    `#(reply ,(unknown-command) ,state-data)))
@@ -81,7 +81,3 @@
   `#(ok ,state))
 
 ;; --- server API --------------------------------------------------------------
-
-(defun greet () 
-  (io:format "hello world~n"))
-

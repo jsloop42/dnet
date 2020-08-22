@@ -17,7 +17,6 @@
 
   ;; server API
   (export
-   (hello 0)
    (init-deps 0)
    (setup-mnesia 0)
    (create-table 0)

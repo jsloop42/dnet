@@ -6,18 +6,15 @@
   `#([#"GET" #"POST"] ,req ,state))
 
 (defun content_types_provided (req state)
-  ; (io:format "content_types_provided~n")
   `#([#(#"text/html" handle-request)] ,req ,state))
 
 (defun content_types_accepted (req state)
-  ; (io:format "content_types_accepted~n")
   `#([#(#"application/json" handle-request)] ,req ,state))
 
 (defun handle-post (req state)
   (io:format "handle-post ~p~n" `(,req))
   (let* ((`#(ok ,body ,_) (cowboy_req:read_body req))
          ((tuple #"url" url) (ljson:decode body)))
-         ;(resp (cowboy_req:set_resp_body #"{\"status\": \"post\"}" req)))
     (io:format "handle-post ~p~n" `(,url))
     (dnet-svc-sup:start-child `(#m(url ,url)))
     `#(true ,(add-response-html-ok req state) ,state)))
@@ -48,4 +45,3 @@
 (defun add-response-html-ok (req _state)
   (let ((html-resp (div "Task scheduled successfully")))  
     (cowboy_req:set_resp_body html-resp req)))
-

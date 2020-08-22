@@ -2,6 +2,16 @@
 
 A REST server and client using [LFE/OTP](http://lfe.io/).
 
+## Usage
+
+```bash
+./repl
+```
+
+```lfe
+lfe> (dnet:start)
+```
+
 ## APIs
 
 ```bash

@@ -42,4 +42,3 @@
 
 (defun terminate-child (pid)
   (supervisor:terminate_child (server-name) pid))
-

@@ -23,3 +23,4 @@ _tdeps
 data
 temp
 
+rebar.lock

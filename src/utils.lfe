@@ -2,5 +2,5 @@
   (export all))
 
 (defun parse-uri (uri)
-  "Parses an HTTP URI into a components map."
+  "Parse an HTTP URI into components."
   (uri_string:parse uri))

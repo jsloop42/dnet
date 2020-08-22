@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# lfe_shell:server().
+rebar3 compile
 
-rebar3 as dev shell
+./_build/default/lib/lfe/bin/lfe

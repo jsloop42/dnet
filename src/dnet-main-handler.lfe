@@ -12,7 +12,6 @@
     `#(,body ,req ,state)))
 
 (defun init (req opts) 
-  ;(io:format "init ~p~n" `(,req))
   `#(cowboy_rest ,req ,opts))
 
 (defun terminate (_req _state)
